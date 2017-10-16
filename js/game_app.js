@@ -246,5 +246,5 @@ var audio_ci = new Audio('audio/ci.wav');
 /* fade in the whole div when the document is ready!
 https://tinyurl.com/ydhk3nfk */
 $(document).ready(function() {
-    $('#scaleable-wrapper').fadeIn(400);
+    $('#very-specific-design').fadeIn(400);
 });
