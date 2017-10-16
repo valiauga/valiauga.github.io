@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Resize with Scale</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="/style.css" 
+              href="https://fonts.googleapis.com/css?family=Archivo+Black|Archivo+Narrow&amp;subset=latin-ext">
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+    <audio>
+    <source id="sound-1" src="audio/vas.wav"></source>
+	<source id="sound-2" src="audio/ki.wav"></source>
+    <source id="sound-3" src="audio/ci.wav"></source>
+	Your browser isn't invited for super fun audio time.
+    </audio>
+    
+</head>
+
+    
+    
+<body onload="checkScaleOnLoad()">
+    
+  
+<!--
+<nav class="navbar navbar-default" id="nav-bar">
+  <div class="container-fluid" >
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+-->
+
+<div class="scaleable-wrapper" id="scaleable-wrapper">
+  <div class="very-specific-design" id="very-specific-design">
+    <div class="buttons">
+<!--
+        <div id="vas">VAS</div>  
+        <div id="ki">KI</div>     
+-->
+    </div>
+    
+    <div class="floating" id="player-1">
+        <p id="player-info-1">Human-A:<br><u>0</u></p>
+    </div>
+    <div class="floating" id="player-2">
+        <p id="player-info-2">Computer-B:<br><u>0</u>&nbsp;</p>
+    </div>
+      <div id="pattern-img">
+        <div class="class-vas-ki-ci" id="vas">VAS</div>  
+        <div class="class-vas-ki-ci" id="ki">KI</div>
+        <div class="class-vas-ki-ci" id="ci">CII
+            <div id="ci-hyphen"></div>  
+        </div>
+        <div class="dash" id="dash-position-1"></div>
+        <div class="dash" id="dash-position-2"></div>
+        <div id="wiggle"></div>
+          
+    <p id="paragraph"><b>[vas - kii - chii]</b><br>Lithuanian take on an otherwise timeless ‘paper-scissors-rock’ game. Instead of a rock, its a well… <br><br> No one knows why it’s a well, but it goes like this; ‘Scissors fall into a well - paper covers the well, paper also doesn’t stand a chance agaist the scissors.<br><br>Traditionally used in solving disputes, trading, perhaps even making marriage proposals; This time, it is a way of testing one’s fortune playing against nothing else but a heartless machine…<br><br>Hover over the colourful type to select a sign, then click the type to cast your chance! Press a ‘lighting’ button to reset the score, then play again...<br><b>brought by valiaugalukas.lt</b></p> 
+      </div>
+
+    
+<!--    SRSLY??!  -->
+    <div></div>
+        
+  </div>
+</div>
+    
+<!--
+<div class="container">
+  <div class="row">
+      <div class="col-6 col-sm-3"><p id="paragraph"><b>[vas - kii - chii]</b><br>Lithuanian take on an otherwise timeless ‘paper-scissors-rock’ game. Instead of a rock, its a well… <br><br> No one knows why it’s a well, but it goes like this; ‘Scissors fall into a well - paper covers the well, paper also doesn’t stand a chance agaist the scissors.<br><br>Traditionally used in solving disputes, trading, perhaps even making marriage proposals; This time, it is a way of testing one’s fortune playing against nothing else but a heartless machine…<br><br>Hover over the colourful type to select a sign, then click the type to cast your chance! Press a ‘lighting’ button to reset the score, then play again...<br><b>brought by valiaugalukas.lt</b></p> 
+      </div>
+  
+
+</div>
+    </div>
+-->
+    
+
+<!--
+     <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
+-->
+    
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+<script  src="js/index.js"></script>
+<script src="js/game_app.js"></script>
+    
+
+</body>
+</html>
