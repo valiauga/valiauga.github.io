@@ -1,0 +1,28 @@
+@font-face {
+   font-family: Andale_Mono;
+   src: url(fonts/Andale_Mono.woff);
+}
+@font-face {
+    font-family: Pesaro;
+    src: url(fonts/Hoftype_Pesaro.Bold.woff);
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+    padding-top:10%;
+}
+
+.div-f1 {
+   font-family: Andale_Mono, fantasy;
+   font-size: 16pt;
+   font-weight:100;
+   
+   padding: 10px;
+}
+
+.div-f2 {
+    font-family: Pesaro;
+    font-size: 51pt;
+    padding: 10px;
+}
