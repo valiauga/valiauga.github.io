@@ -1,15 +1,14 @@
 @font-face {
   font-family: 'Pesaro';
-  src: 
-       url(fonts/Hoftype_Pesaro.Bold.woff) format('woff'),  /* Pretty Modern Browsers */
-       //url('fonts/Hoftype_Pesaro.Bold.ttf')  format('truetype'), /* Safari, Android, iOS */       
+  src: url(fonts/Hoftype_Pesaro.Bold.woff); /* format('woff'),   Pretty Modern Browsers */
+/*       url('fonts/Hoftype_Pesaro.Bold.ttf')  format('truetype'),  Safari, Android, iOS */       
 }
 
 @font-face {
   font-family: 'Andale Mono';
   src: 
-       url(fonts/Andale_Mono.woff) format('woff'),  /* Pretty Modern Browsers */
-       //url('fonts/Andale_Mono.ttf')  format('truetype'), /* Safari, Android, iOS */       
+       url(fonts/Andale_Mono.woff); /* format('woff'),   Pretty Modern Browsers */
+       /* url('fonts/Andale_Mono.ttf')  format('truetype'),  Safari, Android, iOS */       
 }
 
 .custom-header{
