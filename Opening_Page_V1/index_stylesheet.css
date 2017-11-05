@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Pesaro';
   src: url(fonts/Hoftype_Pesaro.Bold.woff); /* format('woff'),   Pretty Modern Browsers */
-/*       url('fonts/Hoftype_Pesaro.Bold.ttf')  format('truetype'),  Safari, Android, iOS */       
+       url('fonts/Hoftype_Pesaro.Bold.ttf');  /* format('truetype'),  Safari, Android, iOS */       
 }
 
 @font-face {
