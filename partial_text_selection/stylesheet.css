@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Andale_Mono;
+    src: url(fonts/Andale_Mono.woff);
+    }
+
+    @font-face {
+        font-family: Pesaro;
+        src: url(fonts/Hoftype_Pesaro.Bold.woff);
+    }
+
+body {
+    overflow: hidden;
+}
+
+.int_txt-wrapper{
+    top: 2%;
+    position: fixed;
+}
+.int_txt{
+    cursor: pointer;
+    display: inline-block;
+    width: 90%;
+    text-align: left;
+    vertical-align: middle;
+    font-family: "Pesaro";
+    font-weight: 500;
+    line-height: 10.7vmin;
+    letter-spacing: 1.5vmin;
+    font-size: 3.7vw;
+    overflow: visible;
+    color: black;
+    z-index: 1;
+/*    background-color: aqua;*/
+    
+    
+}
+#img-1 {
+    position: fixed;
+     margin: auto;
+    display: block;
+    top: 16%;
+    left: 25%;
+    width: 680px;
+    height: 540px;
+    opacity: 0;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#string-1{
+    text-indent: -2.3%;
+ }
+
+.col-md-2 {
+    height: 100vh;
+/*    background-color: yellow; */
+    opacity: 0.5;
+}
+
+
+.vertical-caption-div{
+    
+    position:relative;
+    overflow:visible;
+/*    display: inline-block;*/
+    width: 200%;
+    top: 40%;
+    left: -35%;
+    
+    transform: rotate(-90deg);
+/*    background-color: aqua;*/
+    
+    text-align: center;
+    font-family: "Andale_Mono";
+    letter-spacing: 1.8pt;
+    font-size: 8.5pt;
+    color: black;
+}
