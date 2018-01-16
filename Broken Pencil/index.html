@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <meta name="google" value="notranslate">
+    <title>title</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap-grid.css" />
+  <link rel="stylesheet" href="stylesheet.css"> 
+  </head>
+  <body>
+  
+      
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-4"></div>
+        <div class="col-md-6" style=" height: 100vh;">
+        <div class="pencil-container"></div>
+        </div>
+          <div class="col"></div>
+      </div>
+   </div>
+      
+      
+      
+<!--
+      <div class="pencil-wrapper">
+      <div class="pencil"></div>
+      </div>
+-->
+    
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>   
+      <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+      <script>
+          var inc = 1;
+    $('.pencil-container').mouseover(function() {
+    inc += 1;
+        if (inc > 5){
+            inc = 1;
+        }
+    $(this).css({'background-image' : 'url(/images/' + inc + '.png)'});
+    
+    $(this).mouseout(function(){
+    $(this).css({'background-image' : 'url(/images/not_broken.png)'});
+    })
+});
+      </script>
+  </body>
+</html>
+
