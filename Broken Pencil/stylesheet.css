@@ -6,7 +6,7 @@ body {
  width: 100%; 
  background-color: white; 
  margin-top: 35%;
-background-image: url(images/not_broken.png);
+background-image: url(Broken Pencils/images/not_broken.png);
 background-repeat: no-repeat;
     background-size: 60%;
 }
@@ -17,7 +17,7 @@ background-repeat: no-repeat;
 
 .pencil {
     position: absolute;
-    background-image: url(images/not_broken.png);
+    background-image: url(Broken Pencils/images/not_broken.png);
     left: 37%;
     top: 35%;
 /*
