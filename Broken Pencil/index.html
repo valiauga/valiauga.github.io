@@ -35,14 +35,19 @@
       <script>
           var inc = 1;
     $('.pencil-container').mouseover(function() {
+        
     inc += 1;
-        if (inc > 5){
-            inc = 1;
-        }
-    $(this).css({'background-image' : 'url(images/' + inc + '.png)'});
+    if (inc > 5){
+    inc = 1;
+    }
     
+     
+    $(this).css({'background-image' : 'url(/images/' + inc + '.png)'});
+        
+        
     $(this).mouseout(function(){
-    $(this).css({'background-image' : 'url(images/not_broken.png)'});
+    $(this).css({'background-image' : 'url(/images/not_broken.png)'});
+        is_broken = false;    
     })
 });
       </script>
