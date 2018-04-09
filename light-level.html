@@ -8,6 +8,7 @@
 <div id="tag-id"></div>
 <body>
 <script>
+  <!--- 
 var light_level = 0;
     
 window.addEventListener('devicelight', function(event) {
@@ -15,4 +16,18 @@ window.addEventListener('devicelight', function(event) {
     console.log("l level " + event.value);
 });
 document.getElementById('tag-id').innerHTML = '<ol> light level: ' + light_level + '</ol>';
+  --->
+    
+  window.addEventListener('devicelight', function(event) {
+  var html = document.getElementsByTagName('tag-id')[0];
+
+  if (event.value < 50) {
+    html.classList.add('darklight');
+    html.classList.remove('brightlight');
+  } else {
+    html.classList.add('brightlight');
+    html.classList.remove('darklight');
+  }
+});
+  
 </script>
