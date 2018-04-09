@@ -1,0 +1,90 @@
+@font-face {
+              
+              font-family: akzidenz;
+              src: url(/fonts/AkzidenzGrotesk-Extended.woff);
+            }
+            body { 
+                margin: 0; 
+                background-color: black;
+            }
+            canvas { 
+                width: 100%; 
+                height: 100% 
+            }
+ 
+          #canvas {
+            overflow: hidden;   
+            background-color: red;
+            background-image: url(/images/poster-paradigm/poster-paradigm-500kb.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            padding: 0px;
+            position: static; /* fixed or static */
+            z-index: -1111;
+            position: relative;
+            }
+          #ui-canvas {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            z-index: 1111;
+            position: fixed;
+            opacity: 1.0;
+          }
+          .header  {
+              position: absolute; 
+              width: 100%; 
+              height: 200px; 
+/*              background-color: blue;*/
+              
+          }
+          .footer {
+              width: 100%; 
+              height: 140px; 
+              bottom: 0px; 
+              position: absolute; 
+/*              background-color: green;*/
+              
+          }
+          #copy-style {
+              position: absolute;
+              float: left;
+              font-family: akzidenz;
+              color: white;
+              font-size: 25pt;
+              font-weight:inherit;
+              text-shadow: 0px 0px 50px rgba(0, 0, 0, 1.35);
+              text-decoration: none;
+              cursor: pointer;
+          }
+          
+          .text-wrapper-header {
+              width: 50%;
+          }
+          #svg {
+              margin:  0em 1em 0em 1em;
+          }
+          #pop-up-1  {
+              position: relative;
+              width: 100%;
+              height: 100vh;
+              z-index: 1112;
+              position: fixed;
+              display: none;
+              opacity: 0.96;
+              background-color: black;
+          }
+          
+          #pop-up-2  {
+              position: relative;
+              overflow:auto;
+              width: 100%;
+              height: 100vh;
+              z-index: 1112;
+              position: fixed;
+              display: none;
+              opacity: 0.96;
+              background-color: black;
+          }
