@@ -6,7 +6,7 @@
 
   @font-face{
       font-family: akzidenz-regular;
-      src: url("../fonts/AKZIDENZGROTESK-REGULAR.woff");
+      src: url(../fonts/AKZIDENZGROTESK-REGULAR.woff);
    }
 
     body { 
