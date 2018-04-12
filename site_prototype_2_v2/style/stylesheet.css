@@ -1,12 +1,12 @@
 @font-face {
 
       font-family: akzidenz;
-      src: url(/fonts/AkzidenzGrotesk-Extended.woff);
+      src: url(./fonts/AkzidenzGrotesk-Extended.woff);
     }
 
   @font-face{
       font-family: akzidenz-regular;
-      src: url(/fonts/AKZIDENZGROTESK-REGULAR.woff);
+      src: url(./fonts/AKZIDENZGROTESK-REGULAR.woff);
    }
 
     body { 
@@ -30,7 +30,7 @@
     position:  fixed;
     overflow: hidden; 
     background-color: red;
-    background-image: url(/images/poster-paradigm/poster-paradigm-500kb.jpg);
+    background-image: url(./images/poster-paradigm/poster-paradigm-500kb.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
