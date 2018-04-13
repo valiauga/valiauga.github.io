@@ -10,6 +10,7 @@ src: url(css/fonts/AkzidenzGrotesk-Extended.woff);
 font-family: akzidenz-regular;
 src: url(css/fonts/AKZIDENZGROTESK-REGULAR.woff);
 }
+    
 canvas{
 overflow-x: hidden;
 }
