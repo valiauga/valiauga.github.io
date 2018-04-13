@@ -21,21 +21,6 @@ var styleArray = [
 ];
 
 
-
-//function initMap() {
-//        var StyledMapType = new google.maps.StyledMapType(styleArray);
-//        // Styles a map in night mode.
-//        var map = new google.maps.Map(document.getElementById('map'), {
-//          center: {lat: 45.490611, lng: -9.210608399999956},
-//          zoom: 12,
-//        
-//        });
-////        map.StyledMapType(styles[, styleArray[]);
-//        map.mapTypes.set('styled_map', styledMapType);
-//        map.setMapTypeId('styled_map');
-// 
-//      }
-
 function initMap() {
 
         // Create a new StyledMapType object, passing it an array of styles,
@@ -57,7 +42,9 @@ function initMap() {
           map: map,
           title: 'Paradigm Show'
             });
-          
+    
+    marker.setIcon("images/marker.png"); 
+    marker.setMap(map);       
 
 
 
