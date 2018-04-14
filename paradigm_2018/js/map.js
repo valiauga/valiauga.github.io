@@ -43,7 +43,7 @@ function initMap() {
           title: 'Paradigm Show'
             });
     
-    marker.setIcon("images/marker.png"); 
+    marker.setIcon("images/other/marker-50x80.png"); 
     marker.setMap(map);       
 
 

@@ -10,25 +10,15 @@
     
     <title></title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core + CSS -->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Custom -->
     <link href="css/stylesheet.css" rel="stylesheet">
       <link href="css/stylesheet-small.css" rel="stylesheet">
       
 <style>          
-
-@font-face {
-font-family: akzidenz;
-src: url(css/fonts/AkzidenzGrotesk-Extended.woff);
-}
-
-@font-face{
-font-family: akzidenz-regular;
-src: url(css/fonts/AKZIDENZGROTESK-REGULAR.woff);
-}
-  
 #canvas{
 position: fixed;
 height: 100vh;
@@ -39,8 +29,18 @@ background-image: url(images/poster-paradigm/poster-paradigm-mobile-3.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 /*}*/
-}  
-  
+}
+    
+@font-face {
+font-family: akzidenz;
+src: url(css/fonts/AkzidenzGrotesk-Extended.woff);
+}
+
+@font-face{
+font-family: akzidenz-regular;
+src: url(css/fonts/AKZIDENZGROTESK-REGULAR.woff);
+}
+   
 @media only screen and (min-width: 520px) {          
 body{
 padding-top: 0px;
@@ -137,8 +137,12 @@ background-size: cover;
 }
 #canvas-ui{
 background-color: "";
-height: 100vh;
+/*height: 100vh;*/
+width: 100vw;    
 z-index: 333333; 
+background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
+    
 }
 h1{
 padding-top: 100px;
@@ -190,7 +194,6 @@ height: 80%;
 
 background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
 background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%);
-
 }
 .demo a {
 position: absolute;
@@ -226,6 +229,28 @@ border-bottom: 1px solid #fff;
 transform: rotate(-45deg);
 box-sizing: border-box;
 }
+
+#arrow_bottom:hover{
+filter: alpha(opacity=50);
+opacity: 0.5;
+-webkit-transition: opacity .15s ease-in-out;
+-moz-transition: opacity .15s ease-in-out;
+-ms-transition: opacity .15s ease-in-out;
+-o-transition: opacity .15s ease-in-out;
+transition: opacity .15s ease-in-out;
+cursor: pointer;
+}    
+    
+#arrow_up:hover{
+filter: alpha(opacity=50);
+opacity: 0.5;
+-webkit-transition: opacity .15s ease-in-out;
+-moz-transition: opacity .15s ease-in-out;
+-ms-transition: opacity .15s ease-in-out;
+-o-transition: opacity .15s ease-in-out;
+transition: opacity .15s ease-in-out;
+cursor: pointer;    
+}
 }
 </style>
       
@@ -241,51 +266,45 @@ box-sizing: border-box;
         
     
       <div class="row">
-            <div class="col-lg-12" id="canvas" style=" background-color:black;">
-                <div class="col-lg-12 section" id="canvas-ui" style="height:10vh;  top: 90vh; background-color:;" >
+            <div class="col-lg-12" id="canvas" style=" background-color:black;">                
+            </div> <!-- canvas --->
+        </div> <!-- row --->
 
-                    
-                    
-                </div>                
-                    
-<!--
-            <section id="section01" class="col-lg-12 demo">
-            <a href=""><span></span><br>Scroll Down</a>
-            </section>
--->
-
-
-                    
-
-                
-            </div>
-        </div>  
+        <div class="row">
+            <div class="col-lg-12 section" id="canvas-ui" style="position:fixed; height:10vh; top: 90vh; background-color:; z-index: 3333333; opacity: 1">
+                    <div class="row" >
+                      <div class="col-lg-4 section" style="background-color:;"></div>
+                         <div class="col-lg-4 section arrow-div-small" style="background-color:; padding-top:20px;">
+<!--                      <p style="text-align:center;">SCROLL DOWN<br>⌄</p> --->
+                      <img class="center" id="arrow_up" src="images/other/scroll-down-arrow.svg" style="height:50px;">
+                   </div>
+                 <div class="col-lg-4 section" style="background-color:;"></div>
+               </div>
+            </div>                     
+        </div>
         
+      
         
-        
-        
-        
-      <div class="row padding-100">
+<div class="row padding-100">
+    
           
-          
-          <!-- Title -->
+ <!--- About Exhibition --->
       <div class="col-lg-12">
             <h1 id="about">ABOUT EXHIBITION</h1>
-      </div>
-          
+      </div>          
+<!-- Text Collumn --->
       <div class="col-lg-6" style="min-height:0px;">
         <p>Paradigm proposes a journey through a series of installations questioning the role of the image within the contemporary design process. When renderings materialize so truly that they look real, objects turn into pictures. The design process can’t ignore the photogenic quality of the object. If the image becomes more valuable than the object itself, why make anything physical in the first place?<br>Is this a perversion of design or is this an act of liberation?</p>
       </div>
-
+<!-- Image Collumn -->
       <div class="col-lg-6">
         <img class="image-style" style="" src="images/other/about.png">
       </div>
-
-<!-- Title -->
+<!-- Installations -->
       <div class="col-lg-12">
             <h1>INSTALLATIONS</h1>
       </div>          
-          
+<!-- Collapsables -->          
 <div class="section" id="accordion">
     <!-- 1 -->    
       <div class="card" style="">
@@ -489,70 +508,70 @@ Be calm and quiet between moments of tension. Recover in inactivity and silence.
   </div> <!-- / card --->                         
 </div> <!--- accordion --->
         
-      <div class="col-lg-12">
-        <h1>LOCATION</h1>
-      </div>
-          
-        <div class="col-lg-6" style="min-height:0px;">
-        <p>The event takes place in Ventura Stazione, renowned for its visionary selections beside the traditional frame of the furniture fair, displaying the renew of the contemporary design and new ways of expression. The space also hosts international figures as the dutch Li Edelkoort or the American magazine Surface.</p>
-      </div>
+<div class="col-lg-12">
+<h1>LOCATION</h1>
+</div>
 
-      <div class="col-lg-6">
-          <div class="image-style" id="map" style=" width:100%; height:100%; margin-left:0%; min-height:400px;"></div>
-      </div>
-          
-      <div class="col-lg-12">
-        <h1>FABRICA</h1>
-      </div>  
-          
-     <div class="col-lg-12" style="min-height:0px;">
-        <p>FABRICA - Fabrica is a communication research centre based in Treviso, in the North of Italy. It belongs to the Benetton group. Established in 1994 by Luciano Benetton and Oliviero Toscani.
-            <br><br>
-        Fabrica encourages the creativity of young artists, designers, journalists, creatives from around the world. The range of disciplines is equally diverse, from product design to editorial, including video, interaction or music. Fabrica aims to cross the fields in order to experiment new forms of communication and inspire a specific creative category of young “social catalysts”, aware of the evolution of the modern society’s trends. 
-        </p>
-      </div>
-          
-    <div class="col-lg-12">
-        <h1>PIERRE FREY</h1>
-    </div>  
-          
-    <div class="col-lg-6" style="min-height:0px;">
-        <p>Using La Maison Pierre Frey products for their diversity as for their historical contribution to decoration, the young creatives from FABRICA explore the potential of material – crisp or soft, plain or patterned – to blur the boundaries between the object and its representation, composing an exhibition where the object is the image, and image is the object…
-        </p>
-      </div>
+<div class="col-lg-6" style="min-height:0px;">
+<p>The event takes place in Ventura Stazione, renowned for its visionary selections beside the traditional frame of the furniture fair, displaying the renew of the contemporary design and new ways of expression. The space also hosts international figures as the dutch Li Edelkoort or the American magazine Surface.</p>
+</div>
 
-      <div class="col-lg-6">
-        <img class="image-style" style="" src="images/other/pierrefrey.png">
-      </div>
-      
-      <div class="col-lg-12">
-        <h1>RECIPROCITY DESIGN LIÉGE</h1>
-      </div>  
-          
-    <div class="col-lg-6" style="min-height:0px;">
-        <p>An international triennale that aims to foster open debate on the economic and cultural role of design – products, services, graphics, and architecture – as a vehicle for sustainable change and social innovation. The 2018 edition will feature a dozen exhibitions, two colloquiums, a research/action project, and many workshops. Although centred in Liège, the triennale’s scope will be broad: events will be located throughout the province, plus the nearby towns of Belgian and Dutch Limburg, and in the German border city of Aachen.
-        ln 2018, three central questions will be posed. How can design education play a social role, and offer a space for critical research? How should architects and designers respond to fragility and insecurity? How can co-design and active participation – a combination of designers, students and inhabitants – help address the challenges of urban and social regeneration?
-        </p>
-      </div>
+<div class="col-lg-6">
+  <div class="image-style" id="map" style=" width:100%; height:100%; margin-left:0%; min-height:400px;"></div>
+</div>
 
-      <div class="col-lg-6">
-        <img class="image-style" style="" src="images/other/liege.png">
-      </div>
-    
-      <div class="col-lg-12">
-        <h1>LIÉGE DESIGN WEEK</h1>
-      </div>        
-    
-      <div class="col-lg-12" style="min-height:0px;">
-        <p>05.09 - 25.10<br>
-            Musée La Boverie Parc de la Boverie 3,<br>
-            Liège, BELGIUM<br>
-            <br>
-            Belgium in 1961, The Salone del Mobile in Milan is today one of the most awaited event in the world of furniture. With more than 2,000 exhibitors from all overt the world, it is a international reference point for the design, interior and furnishing sectors.
-        </p>
-      </div>  
-        
-      <div class="col-lg-12">
+<div class="col-lg-12">
+<h1>FABRICA</h1>
+</div>  
+
+<div class="col-lg-12" style="min-height:0px;">
+<p>FABRICA - Fabrica is a communication research centre based in Treviso, in the North of Italy. It belongs to the Benetton group. Established in 1994 by Luciano Benetton and Oliviero Toscani.
+    <br><br>
+Fabrica encourages the creativity of young artists, designers, journalists, creatives from around the world. The range of disciplines is equally diverse, from product design to editorial, including video, interaction or music. Fabrica aims to cross the fields in order to experiment new forms of communication and inspire a specific creative category of young “social catalysts”, aware of the evolution of the modern society’s trends. 
+</p>
+</div>
+
+<div class="col-lg-12">
+<h1>PIERRE FREY</h1>
+</div>  
+
+<div class="col-lg-6" style="min-height:0px;">
+<p>Using La Maison Pierre Frey products for their diversity as for their historical contribution to decoration, the young creatives from FABRICA explore the potential of material – crisp or soft, plain or patterned – to blur the boundaries between the object and its representation, composing an exhibition where the object is the image, and image is the object…
+</p>
+</div>
+
+<div class="col-lg-6">
+<img class="image-style" style="" src="images/other/pierrefrey.png">
+</div>
+
+<div class="col-lg-12">
+<h1>RECIPROCITY DESIGN LIÉGE</h1>
+</div>  
+
+<div class="col-lg-6" style="min-height:0px;">
+<p>An international triennale that aims to foster open debate on the economic and cultural role of design – products, services, graphics, and architecture – as a vehicle for sustainable change and social innovation. The 2018 edition will feature a dozen exhibitions, two colloquiums, a research/action project, and many workshops. Although centred in Liège, the triennale’s scope will be broad: events will be located throughout the province, plus the nearby towns of Belgian and Dutch Limburg, and in the German border city of Aachen.
+ln 2018, three central questions will be posed. How can design education play a social role, and offer a space for critical research? How should architects and designers respond to fragility and insecurity? How can co-design and active participation – a combination of designers, students and inhabitants – help address the challenges of urban and social regeneration?
+</p>
+</div>
+
+<div class="col-lg-6">
+<img class="image-style" style="" src="images/other/liege.png">
+</div>
+
+<div class="col-lg-12">
+<h1>LIÉGE DESIGN WEEK</h1>
+</div>        
+
+<div class="col-lg-12" style="min-height:0px;">
+<p>05.09 - 25.10<br>
+    Musée La Boverie Parc de la Boverie 3,<br>
+    Liège, BELGIUM<br>
+    <br>
+    Belgium in 1961, The Salone del Mobile in Milan is today one of the most awaited event in the world of furniture. With more than 2,000 exhibitors from all overt the world, it is a international reference point for the design, interior and furnishing sectors.
+</p>
+</div>  
+<!--- CREDITS ---->        
+<div class="col-lg-12">
         <h1>CREDITS</h1>
       </div>            
   <div class="col-lg-2" style="min-height:0px; background-color:;">
@@ -606,48 +625,29 @@ Daniela Mesina
   Carlo Tunioli
 </p>          
   </div>          
-  </div>
-  <!-- /.row -->
-</div>
-<!-- /.container -->
+<!--- ARROW UP --->    
+<div class="col-lg-12" style="min-height:50px; bottom:20px;">
+       <img class="center" id="arrow_bottom" src="images/other/scroll-up-arrow.svg" style="height:50px;"> 
+</div>             
+    
+    </div> <!-- /.row -->
+</div> <!-- /.container -->
 
     
     <script src="js/perlin.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js"></script>
     <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+    <script src="js/dat.gui.js" type="text/javascript"></script>       
     <script src="js/three-js.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/gui_controls.js"></script>  
+    
+    <script src="ui-controls.js"></script>  
     <!-- Google Maps  -->  
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWFneD2jsjHkkDRe-9CVFEP5Ax_kToJ-I&callback=initMap&zoom=12" type="text/javascript"></script>
     <script src="js/map.js"></script>  
     <!-- Bootstrap js -->
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-      <script>
-    $('body').hide();        
-    $(document).ready(function(){
-    $('body').fadeIn(1000);
-    console.log("ready");
-//    $('card').prop('disabled', true);
-    
-        $('h2-hover').hover(function(){
-        console.log("card hover");
-       $('h2-hover').fadeTo('slow',0.1);
-    });
-        
-    $(window).scroll(function(){
-        var content_canvas = $('.padding-100').css("opacity");
-        var sH = $(this).scrollTop();
-        $('.padding-100').css("opacity",Math.max(0.001,sH/$(window).height())); 
-//        console.log(sH)
-    });
-        
-    
-});
-      </script>
-      
       
   </body>
-
 </html>
