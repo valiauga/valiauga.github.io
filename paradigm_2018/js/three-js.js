@@ -45,7 +45,7 @@ var cube_1 = new THREE.Mesh(geometry_1, material_1);
 
 
 
-var cylinder_1_geometry = new THREE.CylinderGeometry( 0.25, 0.25, 2.0, 32 );
+var cylinder_1_geometry = new THREE.CylinderGeometry( 0.35, 0.35, 0.01, 50 );
 var cylinder_1_material = new THREE.MeshBasicMaterial( {
 //                color: 0xffff00,
                 envMap: textureCube,
@@ -76,8 +76,9 @@ scene.add( cylinder_2 );
 //fixed positions
 cube.position.set(2, -2, 2);
 cube_1.position.set(-0.8, 4.5, -0.8);
-cylinder_1.position.set(-1.9, 0.34, 5);
-cylinder_2.position.set(4.7, 2, -1.1);
+cylinder_1.position.set(-1.5, 0.12, 5);
+cylinder_1.rotation.z=2;
+cylinder_2.position.set(2.8, 1.1, 3.3);
 
 
 
