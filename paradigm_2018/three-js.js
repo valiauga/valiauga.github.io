@@ -110,6 +110,7 @@ function onWindowResize(){
 
 var render = function () {
     stats.begin();
+    console.log(stats);
     requestAnimationFrame(render);
 
 //moving positions    
