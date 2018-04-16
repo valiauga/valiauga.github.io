@@ -1,3 +1,8 @@
+
+var stats = new Stats();
+		stats.setMode( 1 );
+//		document.getElementById("stats-div").appendChild(stats.domElement);
+
 var time,p,refractSphereCamera;
     
 var scene = new THREE.Scene();
@@ -20,7 +25,10 @@ container.appendChild( renderer.domElement );
     path + 'LEFT' + format, path + 'RIGHT' + format,
     path + 'UP' + format, path + 'DOWN' + format,
     path + 'BACK' + format, path + 'FRONT' + format];
-    var textureCube = THREE.ImageUtils.loadTextureCube(urls);    
+    var textureCube = THREE.ImageUtils.loadTextureCube(urls,{},function(){
+    console.log("three.js textures loaded");
+    $('#loader').fadeOut(1000);
+    });    
 
 //BLOB
 //var geometry = new THREE.SphereGeometry(3, 100, 100, 0, Math.PI * 2, 0, Math.PI * 2);
@@ -105,6 +113,7 @@ function onWindowResize(){
 
 
 var render = function () {
+    stats.begin();
     requestAnimationFrame(render);
 
 //moving positions    
@@ -130,6 +139,7 @@ update_cube_geometry(cube_1,0.6,1.1,time * -1);
 if (window.innerWidth > 500){
 renderer.render(scene, camera);
     }
+stats.end();    
 };
 
 render();
