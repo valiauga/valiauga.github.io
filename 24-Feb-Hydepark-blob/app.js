@@ -17,7 +17,8 @@ document.body.appendChild(container);
 var renderer = new THREE.WebGLRenderer({antialias:true,
                                         alpha:true
                                        });
-renderer.setSize(window.innerWidth, window.innerHeight);
+//renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(1800, 800);
     renderer.setClearColor(0xffffff, 0);
 container.appendChild( renderer.domElement );
 
@@ -59,7 +60,7 @@ material.envMap.mapping = THREE.CubeRefractionMapping;
 var cube = new THREE.Mesh(geometry, material);
 
 scene.add(cube);
-cube.position.set(-0.13, -1.5, -1.3);
+cube.position.set(-0.5, -1.8, -0.5);
 
 
 var update_cube_geometry = function(cube_shape,noise_scale,k,time_input){
