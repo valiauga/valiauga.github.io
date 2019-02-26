@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>MADS</title>
+      <style>
+          body{
+              overflow: hidden;
+              background-color: black;
+          }
+          #plain-text{
+/*              width: 600px;*/
+          }
+      </style>
+  </head>
+  <body>
+      <div id="plain-text"></div>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+      <script src="blotter-js/materials/liquidDistortMaterial.js"></script>
+      <script>
+      // BLOTTER - Example 1
+var text = new Blotter.Text("MADS", {
+  family : "'EB Garamond', serif",
+  size : 700,
+  fill : "#ffffff",
+  paddingLeft : -200,
+  paddingRight : 40
+});
+
+var material = new Blotter.LiquidDistortMaterial();
+
+material.uniforms.uSpeed.value = 0.35;          
+          
+var blotter = new Blotter(material, {
+  texts : text
+});
+
+var elem = document.getElementById("plain-text");
+var scope = blotter.forText(text);
+
+scope.appendTo(elem);
+      </script>
+  </body>
+</html>
