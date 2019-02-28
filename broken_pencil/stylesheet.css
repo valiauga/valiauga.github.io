@@ -1,0 +1,37 @@
+body {
+
+}
+.pencil-container{
+ height: 50%; 
+ width: 100%; 
+ background-color: white; 
+ margin-top: 35%;
+background-image: url(Broken Pencil/images/not_broken.png);
+background-repeat: no-repeat;
+    background-size: 60%;
+}
+.pencil-wrapper{
+/*    position: absolute;*/
+    max-width: 1200px;
+}
+
+.pencil {
+    position: absolute;
+    background-image: url(Broken Pencil/images/not_broken.png);
+    left: 37%;
+    top: 35%;
+/*
+    width: 450px;
+    height: 312px;
+*/
+    
+    width: 50%;
+    height: 50%;
+    background-repeat: no-repeat;
+    
+/*    border: 25px solid green;*/
+    padding: 25px;
+/*    margin: 25px;*/
+
+
+}
