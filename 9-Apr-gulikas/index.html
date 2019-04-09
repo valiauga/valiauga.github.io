@@ -36,15 +36,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>    
         
     <script>
+        let beta, gamma, alpha;
         
         if (!('ondeviceorientation' in window)) {
             $("body").append("<p>Browser not supported</p>");
          } else {
 
             window.addEventListener('deviceorientation', function(event) {
-               document.getElementById('main-man').style.webkitTransform =
-               document.getElementById('main-man').style.transform =
-                       'rotateZ(' + event.beta + 'deg) ';
+                beta = event.beta;
+                alpha = event.alpha;
+                gamma = event.gamma;
+                $("body").append("<p>" + alpha + beta + gamma + "</p>");
+                
+//               document.getElementById('main-man').style.webkitTransform =
+//               document.getElementById('main-man').style.transform =
+//                       'rotateZ(' + event.beta + 'deg) ';
 
          }
 
