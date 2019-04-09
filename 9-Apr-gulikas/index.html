@@ -14,7 +14,7 @@
                 width: auto;
                 height: 200px;
                 width: 460px;
-/*                 background-image: url(trasiulis.png); */
+/*                background-image: url(trasiulis.png);*/
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-color: aqua;
@@ -29,6 +29,12 @@
         <div class="wrapper">
         
             <div id="main-man"></div>
+            
+<!--
+            <p>alpha: </p>
+            <p>beta: </p>
+            <p>gamma: </p>
+-->
         
         </div> 
     
@@ -36,23 +42,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>    
         
     <script>
-        let beta, gamma, alpha;
+        var beta, gamma, alpha;
+        
+        
+        $("#main-man").append("<p>" + "alpha " +alpha +" beta: " + beta + " gamma: " + gamma + "</p>");
         
         if (!('ondeviceorientation' in window)) {
             $("body").append("<p>Browser not supported</p>");
-         } else {
+         } 
+        
+        
+        if ('ondeviceorientation' in window) {
 
             window.addEventListener('deviceorientation', function(event) {
                 beta = event.beta;
                 alpha = event.alpha;
                 gamma = event.gamma;
-                $("body").append("<p>" + alpha + beta + gamma + "</p>");
-                
-//               document.getElementById('main-man').style.webkitTransform =
-//               document.getElementById('main-man').style.transform =
-//                       'rotateZ(' + event.beta + 'deg) ';
-
-         }
+            })}
+                    
 
          
     </script>
