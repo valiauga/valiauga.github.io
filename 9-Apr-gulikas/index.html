@@ -88,6 +88,7 @@
             -webkit-transform: rotateX(-90deg) translateZ(75px) rotate(0deg);
             transform: rotateX(-90deg) translateZ(75px) rotate(0deg);
              background-image:url(trasiulis.png);
+             display: none;
          }
 
          .value
@@ -146,6 +147,8 @@
     
     
     <script>
+        let beta;
+        
         if (!('ondeviceorientation' in window)) {
             document.getElementById('do-unsupported').classList.remove('hidden');
          } else {
@@ -159,6 +162,11 @@
                        'rotateZ(' + event.alpha + 'deg)';
 
                document.getElementById('beta').innerHTML = Math.round(event.beta);
+                beta = document.getElementById('beta');
+                if (beta == 0){
+                document.getElementById("myDIV").style.display = "block";    
+                }
+                
                document.getElementById('gamma').innerHTML = Math.round(event.gamma);
                document.getElementById('alpha').innerHTML = Math.round(event.alpha);
                document.getElementById('is-absolute').innerHTML = event.absolute ? "true" : "false";
