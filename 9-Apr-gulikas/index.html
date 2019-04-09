@@ -42,7 +42,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>    
         
     <script>
-        var beta, gamma, alpha;
+        
         
         
         $("#main-man").append("<p>" + "alpha " +alpha +" beta: " + beta + " gamma: " + gamma + "</p>");
@@ -53,6 +53,10 @@
         
         
         if ('ondeviceorientation' in window) {
+            
+            var beta = 0;
+            var gamma = 0; 
+            var alpha = 0;
 
             window.addEventListener('deviceorientation', function(event) {
                 beta = event.beta;
