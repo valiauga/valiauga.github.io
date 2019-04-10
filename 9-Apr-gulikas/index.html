@@ -9,12 +9,13 @@
               transform: rotateZ(-90deg);
           }
           .img{
-             width: auto;
+              width: auto;
               height: 250px;
               background-size: contain;
               background-repeat: no-repeat;
-              background-image: url(./trasiulis.png);    
-              background-color: aqua;
+              background-image: url(trasiulis.png);    
+/*              background-color: aqua;*/
+              opacity: 0;
           }
       </style>
   </head>
@@ -55,7 +56,7 @@ window.addEventListener('deviceorientation', function(event) {
   var b = Math.round(event.beta);
   var g = Math.round(event.gamma);
   
-  var m_b = Math.round(map(b,0,180,0,100));
+  var m_b = map(b,0,180,0,100);
   $('.img').css('opacity', m_b);
     
       $("#alpha").html("<b>alpha: "+ a +"</b> ");
