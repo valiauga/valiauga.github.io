@@ -2,22 +2,41 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>blrplt</title>
+    <title>boilerplate</title>
+      <style>
+          .wrapper{
+              -webkit-transform: rotateZ(-90deg);
+              transform: rotateZ(-90deg);
+          }
+          .img{
+/*              width: auto;*/
+              height: 250px;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-image: url(trasiulis.png);    
+              background-color: aqua;
+          }
+      </style>
   </head>
   <body>
+      
+      
+  <div class="wrapper">
+      <div class="img"></div>
       <a id="alpha">alpha</a>
       <a id="beta">beta</a>
       <a id="gamma">gamma</a>
-  </body>
+  </div>
+
     
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>        
+        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
     
 <script> 
-  
-  let map = function(n, start1, stop1, start2, stop2, withinBounds) {
+    
+    let map = function(n, start1, stop1, start2, stop2, withinBounds) {
   var newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
   if (!withinBounds) {
     return newval;
@@ -29,7 +48,7 @@
   }
 };
 
-  
+    
 window.addEventListener('deviceorientation', function(event) {
 
   var a = Math.round(event.alpha);
@@ -37,19 +56,19 @@ window.addEventListener('deviceorientation', function(event) {
   var g = Math.round(event.gamma);
   
   var m_b = map(b,0,180,0,100);
-  
-  
-
-    $("#alpha").html("<b>alpha: "+ a +"</b> ");
+  $('.img').css('opacity', m_b);
+    
+      $("#alpha").html("<b>alpha: "+ a +"</b> ");
       $("#beta").html("<b>beta: "+ b +"</b> ");
       $("#gamma").html("<b>gamma: "+ g +"</b> ");
-    
-//  console.log( g.toString() ); // Better to use a non-blocking method like console.log to display results.
 
 }, false);
     
     
+
+    
     
 </script>
-    
+      
+</body>
 </html>
