@@ -55,7 +55,7 @@ window.addEventListener('deviceorientation', function(event) {
   var b = Math.round(event.beta);
   var g = Math.round(event.gamma);
   
-  var m_b = Math.round(map(b,0,180,100,0));
+  var m_b = Math.round(map(b,0,180,0,100));
   $('.img').css('opacity', m_b);
     
       $("#alpha").html("<b>alpha: "+ a +"</b> ");
