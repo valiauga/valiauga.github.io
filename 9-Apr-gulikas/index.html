@@ -16,16 +16,32 @@
     
     
 <script> 
+  
+  let map = function(n, start1, stop1, start2, stop2, withinBounds) {
+  var newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
+  if (!withinBounds) {
+    return newval;
+  }
+  if (start2 < stop2) {
+    return this.constrain(newval, start2, stop2);
+  } else {
+    return this.constrain(newval, stop2, start2);
+  }
+};
+
+  
 window.addEventListener('deviceorientation', function(event) {
 
   var a = Math.round(event.alpha);
   var b = Math.round(event.beta);
   var g = Math.round(event.gamma);
   
-  //var m_a = map(a,0,180,0,100);
+  var m_b = map(b,0,180,0,100);
+  
+  
 
     $("#alpha").html("<b>alpha: "+ a +"</b> ");
-      $("#beta").html("<b>beta: "+ b +"</b> ");
+      $("#beta").html("<b>mapped beta: "+ m_b +"</b> ");
       $("#gamma").html("<b>gamma: "+ g +"</b> ");
     
 //  console.log( g.toString() ); // Better to use a non-blocking method like console.log to display results.
