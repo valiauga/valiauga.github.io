@@ -1,72 +1,35 @@
+<!DOCTYPE html>
 <html>
-    <head> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width,initial-scale=1"> 
-        <title>Trasiulis</title> 
-        
-        <style>
-        
-            .wrapper{
-                
-            }
-            #main-man{
-                
-                width: auto;
-                height: 200px;
-                width: 460px;
-/*                background-image: url(trasiulis.png);*/
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-color: grey;
-/*                 transform: rotateX(90deg) translateZ(75px);*/
-                transform: rotateZ(-90deg);
-                margin-top: 250px
-            }
-        </style> 
-    </head> 
+  <head>
+    <meta charset="UTF-8">
+    <title>blrplt</title>
+  </head>
+  <body>
+      <a id="alpha">alpha</a>
+      <a id="beta">beta</a>
+      <a id="gamma">gamma</a>
+  </body>
     
-    <body> 
-        <div class="wrapper">
-        
-            <div id="main-man"></div>
-            
-<!--
-            <p>alpha: </p>
-            <p>beta: </p>
-            <p>gamma: </p>
--->
-        
-        </div> 
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>    
-        
-    <script>
-        
-        
-        
-        $("#main-man").append("<p>" + "alpha " +alpha +" beta: " + beta + " gamma: " + gamma + "</p>");
-        
-        if (!('ondeviceorientation' in window)) {
-            $("body").append("<p>Browser not supported</p>");
-         } 
-        
-        
-        if ('ondeviceorientation' in window) {
-            
-            var beta = 0;
-            var gamma = 0; 
-            var alpha = 0;
 
-            window.addEventListener('deviceorientation', function(event) {
-                beta = event.beta;
-                alpha = event.alpha;
-                gamma = event.gamma;
-            })}
-                    
-
-         
-    </script>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
-    </body>
+    
+<script> 
+window.addEventListener('deviceorientation', function(event) {
+
+  var al = event.alpha;
+  var b = event.beta;
+  var g = event.gamma;
+
+    $("#alpha").html("<b>"+ al +"</b>");
+    
+//  console.log( g.toString() ); // Better to use a non-blocking method like console.log to display results.
+
+}, false);
+    
+    
+    
+</script>
+    
 </html>
