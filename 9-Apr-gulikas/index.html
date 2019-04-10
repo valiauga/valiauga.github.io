@@ -7,15 +7,18 @@
           .wrapper{
               -webkit-transform: rotateZ(-90deg);
               transform: rotateZ(-90deg);
+              background-color: aqua;
+              height: 100vh;
           }
           .img{
+              position: relative;
               width: auto;
-              height: 250px;
+              height: 100%;
               background-size: contain;
               background-repeat: no-repeat;
               background-image: url(trasiulis.png);    
 /*              background-color: aqua;*/
-              opacity: 0;
+              opacity: 50;
           }
       </style>
   </head>
@@ -57,10 +60,12 @@ window.addEventListener('deviceorientation', function(event) {
   var g = Math.round(event.gamma);
   
   var m_b = map(b,0,180,0,100);
-  if (b == 0){
-    $('.img').css('opacity', "100");
-  }
-  
+    if (b == =){
+  $('.img')..fadeIn( "fast" );
+    }else{
+  $('.img')..fadeOut( "fast" );
+                        
+                        }
     
       $("#alpha").html("<b>alpha: "+ a +"</b> ");
       $("#beta").html("<b>beta: "+ b +"</b> ");
