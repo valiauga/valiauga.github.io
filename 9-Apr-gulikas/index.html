@@ -78,8 +78,10 @@ window.addEventListener('deviceorientation', function(event) {
                         
 //                         }
 
-      if (b_r == 0){
-        $('.img').css( "background-image", "url(./placeholder_2.png);" );
+      if (b_r != 0){
+        $('.img').css( "background-image", "url(./placeholder_1.png)" );
+      }else{
+                $('.img').css( "background-image", "url(./placeholder_2.png)" );
       }
 
   
