@@ -2,51 +2,98 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>boilerplate</title>
+    <title>Index</title>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <style>
-          .wrapper{
-              -webkit-transform: rotateZ(-90deg);
-              transform: rotateZ(-90deg);
-/*               background-color: aqua; */
+      #row{
+      background-color:antiquewhite;
+          text-align: center;
+          
+      }
+          .overlay{
+/*              position: fixed;*/
+              background-color: white;
+              z-index: 111111111;
+              height: 100vh;
+              width: 100vw;
           }
+          
+          .col-md-12{
+              margin: 0px;
+              padding: 0px;
+          }
+          
           .img{
+/*              display: inline-block;*/
+/*              padding: 70px;*/
               width: auto;
-              height: 250px;
+              height: 620px;
               background-size: contain;
               background-repeat: no-repeat;
-              background-image: url(./trasiulis.png);    
+              background-image: url(./placeholder.png);    
+          }
+          
+          #beta{
+              position: absolute;
+              margin-top: 25vh;
+              top: 10vh;
+          font-size: 22px;    
+          }
+          
+          .message{
+              text-align: center;
+              color: black;
+              font-size: 32px;
+          }
+          .overlay{
+              display: inline-block;
+              text-align: center;
+              color: white;
+              background-color: black;
+              height: 100vh;
+              width: 100vw;
+          }
+          .btn{
+              display: block;
+              font-size: 32px;
+              color: black;
+              
           }
       </style>
   </head>
   <body>
-      
-      
-  <div class="wrapper">
-      <div class="img"></div>
-      <a id="alpha">alpha</a>
+  
+      <div class="row" id="dissapear">
+        <div class="col-md-12 overlay" id="" style="">
+            <div class="message-wrapper" style="margin-top: 250px;">
+                <a class="message">Open this page on a mobile and switch it horizontally</a>
+                <button type="button" class="btn btn-light" style="margin-left: 45vw; padding: 20px 60px; margin-top: 40px">OK</button>
+            </div>
+                </div>
+      </div>
+          
+      <div class="row">
+          
+  <div class="col-md-12" id="row">
+          
       <a id="beta">beta</a>
-      <a id="gamma">gamma</a>
-  </div>
-
-    
-
-        
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    
-<script> 
-    
-    let map = function(n, start1, stop1, start2, stop2, withinBounds) {
-  var newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
-  if (!withinBounds) {
-    return newval;
-  }
-  if (start2 < stop2) {
-    return this.constrain(newval, start2, stop2);
-  } else {
-    return this.constrain(newval, stop2, start2);
-  }
-};
+      <div class="img">
+          
+      </div>
+          </div>
+      
+</div>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script>
+      $('.btn').click(function(){
+//         $('#dissapear').css("display","none");
+          $('#dissapear').fadeOut("fast");
+      });
+      </script>
+      
+      <script> 
 
     
 window.addEventListener('deviceorientation', function(event) {
@@ -57,15 +104,11 @@ window.addEventListener('deviceorientation', function(event) {
   
   var m_b = map(b,0,180,0,100);
     if (b != 0){
-  $('.img').css( "fast" );
-    }else{
   $('.img').fadeOut( "fast" );
+    }else{
+  $('.img').fadeIn( "fast" );
                         
-                        }
-    
-      $("#alpha").html("<b>alpha: "+ a +"</b> ");
       $("#beta").html("<b>beta: "+ b +"</b> ");
-      $("#gamma").html("<b>gamma: "+ g +"</b> ");
 
 }, false);
     
@@ -75,5 +118,5 @@ window.addEventListener('deviceorientation', function(event) {
     
 </script>
       
-</body>
+  </body>
 </html>
