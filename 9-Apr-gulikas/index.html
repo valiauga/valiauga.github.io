@@ -5,6 +5,9 @@
     <title>Index</title>
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <style>
+          body{
+              overflow: hidden;
+          }
       #row{
       background-color:antiquewhite;
           text-align: center;
@@ -94,6 +97,18 @@
       </script>
       
       <script> 
+    
+    let map = function(n, start1, stop1, start2, stop2, withinBounds) {
+  var newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
+  if (!withinBounds) {
+    return newval;
+  }
+  if (start2 < stop2) {
+    return this.constrain(newval, start2, stop2);
+  } else {
+    return this.constrain(newval, stop2, start2);
+  }
+};
 
     
 window.addEventListener('deviceorientation', function(event) {
@@ -108,7 +123,11 @@ window.addEventListener('deviceorientation', function(event) {
     }else{
   $('.img').fadeIn( "fast" );
                         
+                        }
+    
+      $("#alpha").html("<b>alpha: "+ a +"</b> ");
       $("#beta").html("<b>beta: "+ b +"</b> ");
+      $("#gamma").html("<b>gamma: "+ g +"</b> ");
 
 }, false);
     
