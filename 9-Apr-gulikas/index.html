@@ -14,7 +14,7 @@
               height: 100vh;
               background-size: contain;
               background-repeat: no-repeat;
-              background-image: url(./placeholder.png);    
+              background-image: url(./placeholder_1.png);    
           }
           
           .row{
@@ -76,13 +76,16 @@ window.addEventListener('deviceorientation', function(event) {
                         
 //                         }
 
+      if (b == 0){
+        $('.img').css( "background-image", "url(./placeholder_2.png)" );
+      }
 
   
       $("#alpha").html("<b>alpha: "+ a +"</b> ");
       $("#beta").html("<b>"+ b_r +"°</b> ");
       $("#gamma").html("<b>gamma: "+ g +"</b> ");
 
-      $('.img').css("opacity",m_b);
+//       $('.img').css("opacity",m_b);
   
 }, false);
 </script>
