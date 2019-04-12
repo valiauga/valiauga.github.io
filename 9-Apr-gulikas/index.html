@@ -62,10 +62,11 @@
 window.addEventListener('deviceorientation', function(event) {
 
   var a = Math.round(event.alpha);
-  var b = Math.round(event.beta);
+//   var b = Math.round(event.beta);
+    var b = event.beta;
   var g = Math.round(event.gamma);
   
-  var m_b = map(b,0,180,0,100);
+  var m_b = map(b,0,180,0,1);
 //     if (b != 0){
 //   $('.img').fadeOut( "fast" );
 //     }else{
