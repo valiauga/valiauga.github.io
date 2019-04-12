@@ -66,17 +66,21 @@ window.addEventListener('deviceorientation', function(event) {
   var g = Math.round(event.gamma);
   
   var m_b = map(b,0,180,0,100);
-    if (b != 0){
-  $('.img').fadeOut( "fast" );
-    }else{
-  $('.img').fadeIn( "fast" );
+//     if (b != 0){
+//   $('.img').fadeOut( "fast" );
+//     }else{
+//   $('.img').fadeIn( "fast" );
                         
-                        }
-    
+//                         }
+
+
+  
       $("#alpha").html("<b>alpha: "+ a +"</b> ");
       $("#beta").html("<b>"+ b +"°</b> ");
       $("#gamma").html("<b>gamma: "+ g +"</b> ");
 
+      $('.img').css("opacity",m_b);
+  
 }, false);
 </script>
       
