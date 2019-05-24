@@ -5,10 +5,11 @@
     <title>index</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" type="text/css" href="header.css">
-<!--    <link rel="stylesheet" type="text/css" href="hamburger.css">-->
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
+      
       <section class="card">
   <div id="card1" class="card--content"></div>
   <div id="card2" class="card--content"></div>
@@ -21,20 +22,34 @@
 </section>
 <!--        <footer>Hey, I'm the fixed footer :)</footer>-->
       
-     <nav class="navbar navbar-default navbar-fixed-bottom">
-  
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div id="description-overlay">
+        <p id="description-text">Jujubes cheesecake lemon drops gummi bears chupa chups carrot cake. Candy canes cotton candy fruitcake chupa chups macaroon chocolate cake ice cream donut sweet roll. Jelly beans cotton candy sesame snaps donut tart pie. Chocolate cake fruitcake pudding gummies sesame snaps cotton candy toffee. Jelly beans topping bear claw apple pie marzipan. Icing chocolate cake toffee sweet roll sweet roll chupa chups. Donut candy canes halvah cheesecake. Liquorice fruitcake lollipop carrot cake danish donut jujubes candy. Tootsie roll tootsie roll lollipop tart ice cream muffin. Sesame snaps powder chocolate bear claw dragée. Cotton candy pastry marshmallow. Fruitcake brownie sesame snaps bear claw cupcake cake.
+
+Chupa chups bear claw sweet marzipan croissant. Marshmallow cheesecake jelly beans gingerbread bear claw. Candy danish carrot cake lemon drops. Biscuit pie donut icing bear claw carrot cake macaroon lollipop oat cake. Pie sugar plum oat cake. Tart cake cake chocolate cake liquorice lollipop cake cake. Jelly beans wafer caramels. Croissant icing cake lemon drops tiramisu jelly-o. Pie gummi bears tart ice cream pastry cookie candy jelly. Sugar plum chocolate bonbon cupcake croissant oat cake cake cupcake. Pudding jelly gingerbread cupcake cake donut croissant. Jelly beans sesame snaps icing jelly beans candy chocolate cake jelly cookie liquorice. Topping chocolate chocolate bar cupcake bonbon liquorice cake.
+
+Jujubes marzipan sesame snaps liquorice toffee fruitcake biscuit jujubes gummi bears. Cake powder croissant lemon drops biscuit halvah tiramisu cheesecake. Marzipan halvah gingerbread carrot cake croissant cotton candy gummies. Cupcake candy canes jelly-o pie chocolate bar. Cheesecake powder brownie jelly-o tootsie roll bonbon. Lemon drops pie cake biscuit pie. Pastry icing pudding. Tart wafer toffee croissant. Gingerbread cupcake cake pastry gingerbread powder lollipop. Apple pie sweet roll fruitcake icing soufflé marzipan gummies chupa chups bear claw. Dessert jelly-o chupa chups danish chocolate. Chocolate bar bear claw apple pie croissant pudding jujubes sugar plum carrot cake.</p>
+    </div>
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img class="logo" alt="Brand" src="https://tinyurl.com/yxrjoq9x">
-      </a>
-        <p class="navbar-text">Name of the project</p>
+          <a class="navbar-brand" href="#">
+            <img class="logo" alt="Brand" src="https://tinyurl.com/yxrjoq9x">
+          </a>
+          <p class="navbar-text" id="project-title">Name of the project</p>
     </div>
       
       <p class="navbar-text pull-right">Menu</p>
   </div>
-
 </nav>
-    <script src="hamburger.js"></script>   
+      
+    <script>        
+        $('#project-title').click(function(){
+            console.log('click');
+            let colors = ["red","green","blue"];
+            console.log(colors[Math.round(Math.random(2))]);
+            $('#description-overlay').css('background-color:',colors[Math.round(Math.random(2))]);
+        $('#description-overlay').toggle(1,'linear');
+  });
+    </script>
   </body>
 </html>

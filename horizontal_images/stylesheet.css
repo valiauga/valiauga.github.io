@@ -45,3 +45,15 @@ background-image: url("https://tinyurl.com/y5hd56n4");
 background-image: url("https://tinyurl.com/y5ud2j4w");
 }
 
+#description-overlay{
+    width: 100vw;
+    height:100vh;
+    background-color: red;
+    display: none;
+    overflow-y: scroll;
+}
+#description-text{
+    padding: 90px 120px 30px 120px;
+    font-size: 60px;
+    
+}
