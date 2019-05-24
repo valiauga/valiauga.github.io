@@ -23,3 +23,6 @@ footer {
     padding: 10px 10px 10px 30px;
 }
 
+.navbar{
+    z-index: 2222222222;
+}

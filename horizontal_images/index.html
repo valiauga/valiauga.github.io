@@ -9,8 +9,10 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
+      <div class="sidebar" id="left-sidebar"></div>
+      <div class="sidebar" id="right-sidebar"></div>
       
-      <section class="card">
+<section class="card">          
   <div id="card1" class="card--content"></div>
   <div id="card2" class="card--content"></div>
   <div class="card--content"></div>
@@ -50,6 +52,26 @@ Jujubes marzipan sesame snaps liquorice toffee fruitcake biscuit jujubes gummi b
             $('#description-overlay').css('background-color:',colors[Math.round(Math.random(2))]);
         $('#description-overlay').toggle(1,'linear');
   });
+        
+        
     </script>
+      
+      <script>
+          let w_dist = $( window ).width();
+          console.log(w_dist);
+        $('#right-sidebar').click(function() {
+                console.log('right click');
+    $('.card').animate({
+            scrollLeft: "+="+w_dist
+        }, 'slow');
+   });
+        $('#left-sidebar').click(function() {
+                console.log('left click');
+    $('.card').animate({
+            scrollLeft: "-="+w_dist
+        }, 'slow');
+   });
+      
+      </script>
   </body>
 </html>
