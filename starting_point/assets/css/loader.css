@@ -1,0 +1,39 @@
+
+  .wrapper{
+      display: none;
+  }
+  .loader{
+      background-color: black;
+      color: white;
+      text-align: center;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      z-index: 222222;
+  }
+  .loader-wrapper{
+      padding-top: 45vh;
+      font-size: 18pt;
+  }
+  .sr-only{
+      color: white;
+  }
+  .spinner-border{
+    border-top-color: currentcolor;
+        border-top-style: solid;
+        border-top-width: 0.15em !important;
+        border-right-color: transparent;
+        border-right-style: solid;
+        border-right-width: 0.15em !important;
+        border-bottom-color: currentcolor;
+        border-bottom-style: solid;
+        border-bottom-width: 0.15em !important;
+        border-left-color: currentcolor;
+        border-left-style: solid;
+        border-left-width: 0.15em !important;
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial;              
+  }
