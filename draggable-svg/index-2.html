@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+  </head>
+  <body>
+      
+      <script src="/rotodrag.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+    <style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#FCBF0D;}
+	.st2{fill:#222148;}
+	.st3{fill:#961914;}
+    
+        .draggable:hover{
+        opacity: 0.5;
+        transition: 0.3s;
+        }
+        .draggable:active{
+            transition: 0.3s;
+            opacity: 1.0;
+        }
+      </style>
+      
+      
+      <script>
+      console.log('rotodrag');
+      </script>
+      
+<!--
+      <svg class="draggables" xmlns="http://www.w3.org/2000/svg">
+            
+        <g transform="translate(-69.25,-170.43)">
+            <path class="st2" d="M52.7,39.6l15.6-2.9L88.6,147l56.2-10.3l2.5,13.4l-71.8,13.2L52.7,39.6z"/>
+        </g>
+          
+      </svg>
+-->
+      
+      <svg class="draggables"
+           xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 280 150" 
+           version="1.1"
+           id="svg4601"
+           >
+<!--    Bounding Box      -->
+	<rect x="0" y="0" width="100vw" height="100vh" fill="none" stroke="#000000" stroke-width="0.0" />
+        
+        <g class="draggable" id="letter-l" transform="translate(450,90)" data-dragstyle="slippery" data-slip-radius="20">
+              <g transform="translate(-69.25,-170.43)">
+<!--                  <path class="st2" d="M52.7,39.6l15.6-2.9L88.6,147l56.2-10.3l2.5,13.4l-71.8,13.2L52.7,39.6z"/>-->
+                  <path class="st2" d="M230.8,224.3l69.8,0l0,484.5l251.8,0l0,69.8l-321.6,0L230.8,224.3z"/>
+              </g>
+        </g>
+	
+        <g class="draggable" id="letter-v" transform="translate(225, 73)" data-dragstyle="slippery" data-slip-radius="1">
+          <g transform="translate(350,-170)">
+<!--              <path class="st3" d="M117,126.4l-16.2,0v-25.2H73.3l0-16.2l43.7,0V126.4z"/>-->
+              <polygon class="st3" points="358.9,366 289.6,296.6 240.6,345.8 358.9,464.1 359,464.1 408,415.1 477.4,345.7 428.3,296.6 "/>
+          </g>
+	   </g>
+          
+        <g class="draggable" id="dot" transform="translate(225, 73)" data-dragstyle="slippery" data-slip-radius="20">
+         <g transform="translate(-225.42,-153.3)">
+<!--            <circle class="st1" cx="100" cy="100" r="13.1"/>-->
+             <circle class="st1" cx="358.1" cy="358.1" r="50.0"/>
+         </g>
+	   </g>
+          
+      </svg>
+  
+      
+      <script>
+//          DOT
+          let c_x = $(window).width()/2;
+          let c_y = $(window).height()/2 + 400;
+          $('.st1').attr('cx', c_x);
+          $('.st1').attr('cy', c_y);
+          
+          
+          //          L
+          let translate_x = $(window).width()/2 - 350;
+          let translate_y = $(window).height()-900;
+          $('#letter-l').attr('transform','translate('+ [translate_x,translate_y].join(" ")+')')
+
+//          V
+          $('#letter-v').attr('transform','translate('+ [translate_x-250,translate_y].join(" ")+')')
+          
+          
+          let width, height;          
+          
+          width = $(window).width();
+         height = $(window).height();
+          $('.draggables').attr('viewBox', [0,0, width, height].join(" "));
+         console.log(width,height);
+          
+      $( window ).resize(function() {
+//          console.log('resize');
+          width = $(window).width();
+          height = $(window).height();
+          console.log(width,height);
+//          $('.draggables').attr('viewBox','0 0 800 400');
+          $('.draggables').attr('viewBox', [0,0, width, height].join(" "));
+
+      });
+      
+          
+      </script>
+      
+  </body>
+</html>
