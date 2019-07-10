@@ -17,13 +17,13 @@
     </head>
     
     <h1>The One Button Project</h1>
-    <h2>World's greatest collaborative project</h2>
-        
-    <button type="button" onclick="alert('Hello world!')">Click Me!</button>
-     
     
+        
+    <button type="button" onclick="">Button</button>
+     
+    <p>Please leave your feedback on how this page can be improved...</p>
 <form name="submit-to-google-sheet">
-  <input name="email" type="email" placeholder="Email" required>
+  <input name="feedback" type="text" placeholder="Your feedback" required>
   <button type="submit">Send</button>
 </form>
 
@@ -33,7 +33,6 @@
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxhGjidKo-TryuIFowVskz_jwoExKD9E1_jQK7ELG2nY16ETKE/exec'
   const form = document.forms['submit-to-google-sheet']
-
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
