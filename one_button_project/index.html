@@ -24,7 +24,7 @@ It will evolve by improving based on users' feedback.<br></p>
     <button type="button" onclick="">Button</button>
      <br><br><br>
 <!--    <p>Please let us know if there is anything that we should improve on this website</a> -->
-<form name="submit-to-google-sheet">
+<form id="form" name="submit-to-google-sheet">
   <input name="feedback" type="text" placeholder="Your feedback..." required>
   <button type="submit">Send</button>
     <br><br>
@@ -40,9 +40,14 @@ It will evolve by improving based on users' feedback.<br></p>
   form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
+      .then(response => success(response))
       .catch(error => console.error('Error!', error.message))
   })
+    
+    function success(response){
+        document.getElementById("form").reset();
+        console.log('Success!', response);
+    }
 </script>
     
 </body>
