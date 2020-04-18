@@ -1,0 +1,57 @@
+
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta itemprop="image" content="placeholder.webp">
+    <meta itemprop="name" content="WebRTC code samples">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+
+    <base target="_blank">
+
+    <title>getUserMedia to canvas</title>
+
+    <link rel="icon" sizes="192x192" href="/placeholder.webp">
+    
+<!--    <link rel="stylesheet" href="../../../css/main.css">-->
+    <style>
+        video{
+            display: none;
+        }
+        canvas{
+/*            display:block;*/
+            width: 460px;
+            height: 360px; 
+/*
+            width: 1px;
+            height: 1px; 
+*/
+            
+            background-image: url("placeholder.png");
+            background-size: cover;
+        }
+    
+    </style>
+
+</head>
+
+<body>
+
+<div id="container" style="">
+
+    <video playsinline autoplay></video>
+    <canvas></canvas>
+</div>
+    <button>Take snapshot</button>
+    <div id="p5"></div>
+    
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js" integrity="sha256-w7+V9/jcjUhs0pVV3uaphYQbXkTJZkd/3CfsinPRzvM=" crossorigin="anonymous"></script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="main.js" async></script>
+
+
+</body>
+</html>
