@@ -57,6 +57,8 @@ let y = 0;
 
 function imgLoad(path){
     img = loadImage(path);
+    mobilenet = ml5.imageClassifier('MobileNet',modelReady)
+    predict();
 }
 
 
@@ -86,8 +88,7 @@ function setup() {
 
   imgLoad(placeholderURL);  
   createCanvas(460, 360);
-  mobilenet = ml5.imageClassifier('MobileNet',modelReady)
-    predict();
+  
 }
 
 function draw() {
