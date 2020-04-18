@@ -18,10 +18,10 @@
 <!--    <link rel="stylesheet" href="../../../css/main.css">-->
     <style>
         video{
-/*             display: none; */
+/*            display: none;*/
         }
         canvas{
-/*            display:block;*/
+            display:none;
 /*
             width: 460px;
             height: 360px; 
@@ -32,6 +32,31 @@
             background-image: url("placeholder.png");
             background-size: cover;
         }
+        
+        .p5Canvas{
+            position: fixed;
+/*            display: none;*/
+        }
+        .story {
+            position: fixed;
+            top:500px;
+            width: 300px;
+            padding: 0px;
+        }
+        ul{
+            padding: 0px;
+        }
+        input{
+            width: 460px;
+        }
+        #button{
+            position: fixed;
+            top:500px;
+        }
+        .prompt{
+            position: fixed;
+            top: 50px;
+        }
     
     </style>
 
@@ -40,14 +65,24 @@
 <body>
 
 <div id="container" style="">
-
+    <div class="">
+        <span class="prompt">
+        <a class="prompt--1">Show me something...</a>
+        <a class="prompt--2">Red</a>
+        </span>
+    </div>
     <video playsinline autoplay></video>
     <canvas></canvas>
-    <div id="p5--container"></div>
-</div>
-    <button>Take snapshot</button>
-    <div id="p5"></div>
     
+    
+</div>
+    <div class="wrapper">
+        <button id="button">Capture</button>
+        <ul class="story">
+            <ul class="storry--entry"> <h2>Once upon a time...</h2> </ul>
+        </ul>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>    
 <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js" integrity="sha256-w7+V9/jcjUhs0pVV3uaphYQbXkTJZkd/3CfsinPRzvM=" crossorigin="anonymous"></script>
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
