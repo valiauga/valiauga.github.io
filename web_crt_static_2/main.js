@@ -12,6 +12,11 @@ let mobilenet;
 let dataURL;
 let img;
 let label;
+let prompt = ['yellow','green','square','round','soft','blue','triangle','sharp'];
+let rNum = 0;
+let objList = [''];
+
+
 
 const button = document.querySelector('button');
 button.onclick = function() {
@@ -30,12 +35,19 @@ button.onclick = function() {
     dataURL = canvas.toDataURL();    
     imgLoad(dataURL);
     
-    $('#story--entry').append('<li>' + label + '</li>');
-    $('#story--entry').append('<input> </input>');
     
+    if (objList.indexOf(label) !== -1){
+        console.log("value exists");
+    }else{
+        objList.push(label);    
+        $('#story--entry').append('<li>' + label + '</li>');
+        $('#story--entry').append('<input placeholder="what happened next..."> </input>');
+        
+        $("#camera--trigger").html('Show me something... ' + '<b>' + prompt[Math.round(random(prompt.length))] + '</b>');
+    };
 
-    
-};
+    console.log(Math.round(random(prompt.length)))
+}
 
 const constraints = {
     audio: false,
@@ -65,9 +77,7 @@ function modelLoaded() {
 
 
 function setup() {
-
   imgLoad(dataURL);
-  
 }
 
 function imgLoad(path){
@@ -80,6 +90,7 @@ function imgLoad(path){
 
 function modelReady(){
     console.log("model ready");
+    $("#camera--trigger").html('Show me something... ' + '<b>' + prompt[Math.round(random(prompt.length))] + '</b>');
 }
 
 function predict(){
@@ -92,7 +103,8 @@ function gotResults(err, results){
         console.log(err);
     }else{
         label = results[0].label;
-        console.log(results[0]);
+        label = label.substring(0, label.indexOf(',')); 
+        console.log(label);
     }
 }
 

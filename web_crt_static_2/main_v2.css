@@ -3,8 +3,14 @@ html, body{
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%:
+    width: 100%;
+    
+    font-family: 'Merriweather', sans-serif; 
+/*    font-weight: 300;*/
+    word-break: break-word;
 }
+
+
 
 #camera, #camera--view{
     position: fixed;
@@ -20,11 +26,39 @@ html, body{
     z-index: 22222222;
 }
 
+#story--entry{
+    
+}
+
+input{
+  font-size:14px;
+font-style: italic;
+  padding:10px 10px 10px 0px;
+  display:block;
+  width:30vw;
+  border:none;
+  border-bottom:1px solid #1c1c1c;
+  background: none;
+}
+input:focus{ 
+  outline:none; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+li {
+ list-style: none;
+ padding: 20 0 10;
+}
+
 #camera--trigger{
-    width: 200px;
+    width: 250px;
     background-color: black;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 30px;
     border: none;
     padding: 15px 20px;
@@ -34,4 +68,5 @@ html, body{
     bottom: 30px;
     left: calc(50% - 100px);
 }
+
 
