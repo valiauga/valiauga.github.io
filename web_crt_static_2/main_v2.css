@@ -7,12 +7,16 @@ html, body{
 }
 
 #camera, #camera--view, #story{
-/*     position: fixed; */
+    position: fixed;
     height: 100%;
     width: 100vw;
     object-fit: cover;
+    
 }
 
+#camera-view{
+    z-index: -11111111;
+}
 
 #camera--trigger{
     width: 200px;
