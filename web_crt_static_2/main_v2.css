@@ -14,8 +14,9 @@ html, body{
     
 }
 
-#story{
-    position: relative;
+.story-wrapper{
+    position: fixed;
+    top: 20px;
     z-index: 22222222;
 }
 
