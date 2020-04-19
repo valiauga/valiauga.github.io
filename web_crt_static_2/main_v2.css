@@ -6,7 +6,7 @@ html, body{
     width: 100%:
 }
 
-#camera, #camera--view, #story{
+#camera, #camera--view{
     position: fixed;
     height: 100%;
     width: 100vw;
@@ -14,8 +14,9 @@ html, body{
     
 }
 
-#camera-view{
-    z-index: -11111111;
+#story{
+    position: relative;
+    z-index: 22222222;
 }
 
 #camera--trigger{
