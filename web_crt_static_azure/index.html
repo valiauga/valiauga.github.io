@@ -1,0 +1,73 @@
+
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="WebRTC code samples">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta itemprop="description" content="Client-side WebRTC code samples">
+    <meta itemprop="image" content="../../../images/webrtc-icon-192x192.png">
+    <meta itemprop="name" content="WebRTC code samples">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+
+    <base target="_blank">
+
+    <title>getUserMedia to canvas</title>
+
+    <link rel="icon" sizes="192x192" href="../../../images/webrtc-icon-192x192.png">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main_v2.css">
+
+</head>
+
+<body>
+
+<!--
+<div id="container">
+
+    <div class="video--container">
+        <p>Video</p>
+        <video playsinline autoplay></video>
+    </div>
+
+    <button>Take snapshot</button>
+
+    <p>Canvas</p>
+    <canvas></canvas>
+</div>
+-->
+
+     <!-- Camera -->
+        <main id="camera">
+
+            <!-- Camera view -->
+            <video id="camera--view" autoplay playsinline></video>
+
+            <!-- Camera sensor -->
+            <canvas id="camera--canvas"></canvas>
+
+
+            <!-- Story -->
+            <div class="story-wrapper">
+                <ul id="story">
+                <ul id="story--entry"> <h2>Once upon a time...</h2> </ul>
+                </ul>
+            </div>
+            <!-- Camera trigger -->
+            <button id="camera--trigger">Loading...</button>
+
+        </main>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js" integrity="sha256-w7+V9/jcjUhs0pVV3uaphYQbXkTJZkd/3CfsinPRzvM=" crossorigin="anonymous"></script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="./main_v2.js" async></script>
+
+
+</body>
+</html>
