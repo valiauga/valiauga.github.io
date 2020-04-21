@@ -24,20 +24,6 @@
 
 <body>
 
-<!--
-<div id="container">
-
-    <div class="video--container">
-        <p>Video</p>
-        <video playsinline autoplay></video>
-    </div>
-
-    <button>Take snapshot</button>
-
-    <p>Canvas</p>
-    <canvas></canvas>
-</div>
--->
 
      <!-- Camera -->
         <main id="camera">
@@ -68,6 +54,12 @@
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 <script src="./main_v2.js" async></script>
 
+<script>
+$( document ).ready(function() {
+    $("#camera--trigger").html('Something... ' + '<b>' + prompt[Math.round(Math.random(prompt.length))] + '</b>');
+});
+
+ </script>
 
 </body>
 </html>

@@ -4,8 +4,8 @@ html, body{
     padding: 0;
     height: 100%;
     width: 100%;
-    
-    font-family: 'Merriweather', sans-serif; 
+
+    font-family: 'Merriweather', sans-serif;
 /*    font-weight: 300;*/
     word-break: break-word;
 }
@@ -17,7 +17,7 @@ html, body{
     height: 100%;
     width: 100vw;
     object-fit: cover;
-    
+
 }
 
 .story-wrapper{
@@ -27,7 +27,7 @@ html, body{
 }
 
 #story--entry{
-    
+
 }
 
 input{
@@ -40,8 +40,8 @@ font-style: italic;
   border-bottom:1px solid #1c1c1c;
   background: none;
 }
-input:focus{ 
-  outline:none; 
+input:focus{
+  outline:none;
 }
 
 /* active state */
@@ -68,5 +68,3 @@ li {
     bottom: 30px;
     left: calc(50% - 125px);
 }
-
-

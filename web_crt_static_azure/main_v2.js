@@ -52,46 +52,43 @@ button.onclick = function() {
     dataURL = canvas.toDataURL();
 //    newBlob = makeblob(dataURL);
   //  console.log(newBlob);
+
+  // Process & update UI...
   processImage(dataURL);
-
-
-
-    if (objList.indexOf(retrievedData) !== -1){
-        console.log("value exists");
-    }else{
-        objList.push(retrievedData);
-        $('#story--entry').append('<li>' + retrievedData + '</li>');
-        $('#story--entry').append('<input placeholder="what happened next..."> </input>');
-
-        $("#camera--trigger").html('Show me something... ' + '<b>' + '' + '</b>');
-    };
-
 
 }
 
+//Update UI
+function updateUI(){
+  if (objList.indexOf(retrievedData) !== -1 && objList.indexOf(retrievedData) !== 'undefined'){
+      console.log("value exists");
+  }else{
+      objList.push(retrievedData);
+      $('#story--entry').append('<li>' + retrievedData + '</li>');
+      $('#story--entry').append('<input placeholder="what happened next..."> </input>');
+  };
+}
+
+//Camera...
 const constraints = {
     audio: false,
     video: {
         facingMode: "environment"
     }
 };
-
 function handleSuccess(stream) {
   window.stream = stream; // make stream available to browser console
   video.srcObject = stream;
 }
-
 function handleError(error) {
   console.log('navigator.MediaDevices.getUserMedia error: ', error.message, error.name);
 }
-
 navigator.mediaDevices.getUserMedia(constraints).then(handleSuccess).catch(handleError);
 
-
-
+//Image processing...
 function processImage(dataPath) {
     let data = dataPath;
-
+    $("#camera--trigger").html('Loading...');
     $.ajax({
         url: endpoint,
 
@@ -111,11 +108,13 @@ function processImage(dataPath) {
     .done(function(data) {
         // Show formatted JSON...
         // console.log(JSON.stringify(data, null, 2));
-        console.log(data);
+        // console.log(data);
         // retrievedData = parseData(data);
         // retrievedData = data; //retrievedData.description.captions[0].text
         retrievedData = data.description.captions[0].text;
-
+        console.log("retrievedData: " + retrievedData);
+        $("#camera--trigger").html('Something... ' + '<b>' + prompt[Math.round(Math.random(prompt.length-1))] + '</b>');
+        updateUI();
 
     })
 
@@ -128,7 +127,5 @@ function processImage(dataPath) {
         alert(errorString);
     });
 };
-
 function parseData(data){
-
 }
