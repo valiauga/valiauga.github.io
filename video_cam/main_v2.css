@@ -1,0 +1,132 @@
+html, body{
+    position: fixed;
+    background-color: gainsboro;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    font-family: 'Merriweather', sans-serif;
+/*    font-weight: 300;*/
+    word-break: break-word;
+}
+
+
+
+#camera, #camera--view{
+    position: fixed;
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -111111;
+}
+
+#camera--canvas{
+  /* position: fixed; */
+  z-index: 111111;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#camera--overlay{
+  position: fixed;
+  width: 70vw;
+  height: 70vh;
+  /* CENTER... */
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  /* z-index: 44444444;
+  mix-blend-mode: exclusion;
+  opacity: 0.4; */
+}
+
+#svg--box{
+  width: 70vw;
+    height: 100vh;
+    position: fixed;
+    left: 200px;
+    z-index: 999999;
+}
+
+#camera--overlay--total{
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  background-color: blue;
+
+  background-color: #032642;
+  /* mix-blend-mode: exclusion; */
+  opacity: 0.3;
+  z-index: 53333333;
+}
+
+.story-wrapper{
+    position: fixed;
+    top: 20px;
+    z-index: 22222222;
+}
+
+#camera-trigger-prompt{
+  position: fixed;
+  width: 100vw;
+  height: 20vh;
+  z-index: 777777777777;
+  background-color: red;
+}
+
+#story--entry{
+
+}
+
+#story{
+  padding: 0px;
+}
+
+input{
+  font-size:14px;
+font-style: italic;
+  padding:10px 10px 10px 0px;
+  display:block;
+  width:80vw;
+  border:none;
+  border-bottom:1px solid #1c1c1c;
+  background: none;
+}
+input:focus{
+  outline:none;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+li {
+ list-style: none;
+ padding: 20 0 10;
+}
+
+#camera--trigger{
+    width: 400px;
+    background-color: #032642;
+    color: white;
+    font-size: 14px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 200px);
+    z-index: 555555555;
+}
+
+#camera--trigger:hover{
+   background-color: #FEBB74;
+   color: #032642;
+}
