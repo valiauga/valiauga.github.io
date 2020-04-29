@@ -121,9 +121,23 @@ li {
     text-align: center;
     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
     position: fixed;
-    bottom: 30px;
+    bottom: 70px;
     left: calc(50% - 200px);
     z-index: 555555555;
+}
+
+#camera--next{
+  position: fixed;
+  bottom: 30px;
+  width: 100px;
+  left: calc(50% - 50px);
+  z-index: 555555555;
+  background: none;
+  border-style: none;
+
+  /* background-color: #032642; */
+  color: white;
+  font-size: 14px;
 }
 
 #camera--trigger:hover{

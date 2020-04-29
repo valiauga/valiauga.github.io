@@ -1,4 +1,5 @@
 
+<!-- https://stackoverflow.com/questions/22579508/subtract-one-circle-from-another-in-svg -->
 <html>
 <head>
 
@@ -31,7 +32,7 @@
             <!-- Camera view -->
             <video id="camera--view" autoplay playsinline></video>
 
-
+            <!-- CLIP IMAGE -->
             <!-- <svg id="camera--overlay" height="210" width="500"> -->
             <svg id="svg--box" viewBox="0 0 500 500" x="0px" y="0px">
               <defs>
@@ -42,6 +43,22 @@
 
               <image id="the--image" width="100%" height="100%" clip-path="url(#shape)"  xlink:href="" ></image>
             </svg>
+            <!-- CLIP IMAGE -->
+
+            <!-- SUBTRACT SHAPES -->
+            <!-- <div style="">
+                <svg width="100vw" height="100vh">
+                  <defs>
+                    <mask id="hole">
+                      <rect width="100%" height="100%" fill="white"/>
+                      <circle r="90" cx="100" cy="100" fill="black"/>
+                    </mask>
+                  </defs>
+
+                  <circle id="donut" r="100" cx="100" cy="100" mask="url(#hole)" />
+                </svg>
+              </div> -->
+              <!-- SUBTRACT SHAPES -->
 
                 <img id="camera--overlay" src="" alt="shape...">
                 <div id="camera--overlay--total"></div>
@@ -52,7 +69,9 @@
             <!-- <canvas></canvas> -->
             <!-- Camera trigger -->
             <button id="camera--trigger">Loading...</button>
+            <button id="camera--trigger-2">cancel</button>
 
+              <button id="camera--next" name="button">Next...</button>
         </main>
 
 
@@ -63,11 +82,7 @@
 <script src="main.js" async></script>
 
 <script>
-$( document ).ready(function() {
-    $("#camera--trigger").html('Something...');
-    // $( '#camera--overlay' ).attr("src","svg/shape-0" + Math.floor(Math.random(100)*10) + ".svg");console.log(Math.floor(Math.random(10)*10));
-    $( '#camera--overlay' ).attr("src","svg/shape-09.svg");
-});
+
 
  </script>
 

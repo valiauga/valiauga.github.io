@@ -11,12 +11,13 @@
 	.st5{fill:#1F8FCA;}
 	.st6{fill:#8580BB;}
 	.st7{fill:#167279;}
-	.st8{opacity:0.3;}
-	.st9{fill:#FFFFFF;}
-	.st10{opacity:0.3;fill:#FFFFFF;stroke:#032642;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#032642;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#167279;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#1F8FCA;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#F9927F;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#8580BB;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
-<g class="st8">
-	<rect x="147" y="2.07" class="st9" width="213" height="494.87"/>
-	<path class="st4" d="M359,3.07v492.87H148V3.07H359 M361,1.07H146v496.87h215V1.07L361,1.07z"/>
+<g>
+	<path class="st3" d="M355,7.07v484.87H152V7.07H355 M361,1.07H146v496.87h215V1.07L361,1.07z"/>
 </g>
 </svg>

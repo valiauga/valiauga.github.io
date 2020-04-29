@@ -11,9 +11,11 @@
 	.st5{fill:#1F8FCA;}
 	.st6{fill:#8580BB;}
 	.st7{fill:#167279;}
-	.st8{opacity:0.3;}
-	.st9{fill:#FFFFFF;}
-	.st10{opacity:0.3;fill:#FFFFFF;stroke:#032642;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st8{fill:none;stroke:#032642;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#167279;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#1F8FCA;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st11{fill:none;stroke:#F9927F;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st12{fill:none;stroke:#8580BB;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
-<rect x="5" y="5" class="st10" width="489" height="489"/>
+<rect x="5" y="5" class="st11" width="489" height="489"/>
 </svg>
