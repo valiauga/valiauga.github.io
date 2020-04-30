@@ -151,7 +151,7 @@ li {
   position: fixed;
   /* width: 100%; */
   height: 100%;
-  left: calc(50% - 640px);
+  left: calc(50% - 500px);
 /*     left: calc(31% - 100vw); */
 /*   left:(-120vw); */
 /* clip-path: ellipse(300px 300px at 50vw 44vh); */
