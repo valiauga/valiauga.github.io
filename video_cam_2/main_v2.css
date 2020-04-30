@@ -153,7 +153,7 @@ li {
   height: 100%;
 /*   left: calc(50% - 540px); */
 /*     left: calc(31% - 100vw); */
-  left:(-100vw);
+  left:(-120vw);
 /* clip-path: ellipse(300px 300px at 50vw 44vh); */
 /* clip-path: polygon(50% 0%, 80% 100%, 0 40%, 100% 40%, 20% 100%); */
   clip-path: circle(150px at center);
