@@ -113,7 +113,7 @@ h3{
       height: 40px;
 /*      background: #ff2255;*/
 /*    background-image: image('/crop-mark.png');*/
-    background-image:url('/crop-mark.png');
+    background-image:url('./crop-mark.png');
     background-repeat: no-repeat;
     background-size:cover;
 /*    content:url(http://placehold.it/350x150);*/
