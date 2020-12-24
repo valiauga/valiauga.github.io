@@ -1,0 +1,95 @@
+<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_center
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hotspots</title>
+      
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="stylesheet.css">
+  </head>
+    
+  <body>
+   
+      <div class="overlay--mockup">
+          
+        
+          <div class="col-1">
+          <img style="position: relative; width: inherit;" src='http://bobrowski.eu/lt/wp-content/uploads/2020/12/1.jpg'>
+              <a>Miesto maketas prie įėjimo į karalienės Luizės parką. Miesto centras<br>
+Tilžė, Tilist, Советск (Sovetskas), 2016
+
+</a>
+          </div>
+        
+    
+          
+        <div class="close">CLOSE</div>
+      </div>
+      
+      
+      <div class="main--title">
+              <h1 style="">Johansesas Bobrowskis</h1>
+              <h3>Pažinkime Mažaja Lietuva ir Vilkiskio krasta kaip J. Bobrowskio kurybos saltini</h3>
+          </div>
+    
+  <div class="main">   
+      
+        
+      
+      <div class="container">
+        <img style="width: 1088px;" src='room.jpg'>
+          
+          <div class="hotspots">
+              
+              <div class="hotspot" id="hot1">
+                  <div class="trigger"></div>
+              </div>
+              
+              <div class="hotspot">
+                  <div class="trigger"></div>
+              </div>
+              
+              <div class="hotspot">
+                  <div class="trigger"></div>
+              </div>
+              
+              
+        </div>
+          
+          
+      </div>
+      
+  </div>
+      
+      
+
+      
+
+      
+      <script>
+     $(document).ready(function(){
+        console.log('ready');
+         $('#hot1').click(function(){
+             console.log('click1');
+             $(".overlay--mockup").fadeIn('slow');
+         });
+         
+         $('.close').click(function(){
+             $(".overlay--mockup").fadeOut('slow');
+         });
+         
+     });
+      
+      </script>
+      
+      
+  </body>
+</html>

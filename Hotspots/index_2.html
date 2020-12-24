@@ -1,0 +1,76 @@
+<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_center
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hotspots</title>
+      
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      
+          <link rel="stylesheet" href="stylesheet.css">
+  </head>
+    
+  <body>
+   
+      <div class="overlay--mockup">
+      <div class="close">CLOSE</div>
+      </div>
+      
+      <div class="title-container">
+      <h1>Title</h1>
+      <h3>Subtitle</h3>
+          </div>
+  <div class="main">   
+      
+      <div class="container">
+        <img src='http://unsplash.it/1280/720/?image=947'>
+          
+          <div class="hotspots">
+              
+              <div class="hotspot" id="hot1">
+                  <div class="trigger"></div>
+              </div>
+              
+              <div class="hotspot">
+                  <div class="trigger"></div>
+              </div>
+              
+              <div class="hotspot">
+                  <div class="trigger"></div>
+              </div>
+              
+              
+        </div>
+          
+          
+      </div>
+      
+  </div>
+      
+      
+
+      
+
+      
+      <script>
+     $(document).ready(function(){
+        console.log('ready');
+         $('#hot1').click(function(){
+             console.log('click1');
+             $(".overlay--mockup").fadeIn('slow');
+         });
+         
+         $('.close').click(function(){
+             $(".overlay--mockup").fadeOut('slow');
+         });
+         
+     });
+      
+      </script>
+      
+      
+  </body>
+</html>
