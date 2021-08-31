@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>City Coin</title>
+    
+  </head>
+
+<body>
+
+  <div class="div1">
+    <div class="div2">
+
+
+      <form>
+        <label for="pswd">ENTER PASSWORD</label>
+        <br>
+        <input class="box" type="text" id="pswd">
+        <br>
+        <input class="confirm" type="button" value="SUBMIT" onclick="checkPswd();" />
+      </form>
+
+
+    </div>
+  </div>
+
+<script>
+
+function checkPswd() {
+      var confirmPassword = "NEON SHEEPS DRUM KEEPS";
+      var password = document.getElementById("pswd").value;
+      if (password == confirmPassword) {
+          console.log("success");
+        window.location = "index.html";
+      }
+    }
+
+</script>
+
+<script>
+
+
+var input = document.getElementById("pswd");
+
+input.addEventListener("keyup", function(event) {
+  var input = document.getElementById("pswd");
+  if (event.keyCode === 13) {
+  //  event.preventDefault();
+  //  document.getElementsByClassName("confirm").click();
+  checkPswd();
+  }
+});
+
+
+</script>
+
+</body>
+
+</html>
